@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'lists/gridList_screen.dart';
-import 'lists/horizontalList_screen.dart';
-import 'lists/itemsDifferent_screen.dart';
+import '../lists/gridList_screen.dart';
+import '../lists/horizontalList_screen.dart';
+import '../lists/itemsDifferent_screen.dart';
 import 'package:cookbook_salazar/lists/spacedItems_screen.dart';
-import 'lists/floatingAppBar_screen.dart';
-import 'lists/listsIcons_screen.dart';
-import 'lists/longLists_screen.dart';
+import '../lists/floatingAppBar_screen.dart';
+import '../lists/listsIcons_screen.dart';
+import '../lists/longLists_screen.dart';
 
 class ListScreen extends StatelessWidget {
   const ListScreen({super.key});

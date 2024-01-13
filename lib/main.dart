@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'design/menu_screen.dart';
-import 'design_screen.dart';
-import 'form_screen.dart';
-import 'lists_screen.dart';
+import 'menu/design_screen.dart';
+import 'menu/form_screen.dart';
+import 'menu/lists_screen.dart';
 void main() {
   runApp(const MyApp());
 }
