@@ -4,9 +4,9 @@ void main() {
   runApp(
     MaterialApp(
       title: 'Routes Demo',
-      initialRoute: '/',
+      initialRoute: '/',  // Establece la ruta inicial como '/'
       routes: {
-        '/': (context) => const FirstScreen(),
+        '/': (context) => const OtherScreen(),
         '/second': (context) => const SecondScreen(),
         '/tercero': (context) => const ThirdScreen(),
       },
@@ -14,8 +14,8 @@ void main() {
   );
 }
 
-class FirstScreen extends StatelessWidget {
-  const FirstScreen({super.key});
+class OtherScreen extends StatelessWidget {
+  const OtherScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -36,7 +36,7 @@ class FirstScreen extends StatelessWidget {
 }
 
 class SecondScreen extends StatelessWidget {
-  const SecondScreen({super.key});
+  const SecondScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -49,29 +49,28 @@ class SecondScreen extends StatelessWidget {
           onPressed: () {
             Navigator.pushNamed(context, '/tercero');
           },
-          child: const Text('Go back!'),
+          child: const Text('Go to third screen!'),
         ),
       ),
     );
   }
 }
 
-class ThirdScreen extends StatelessWidget{
-  const ThirdScreen ({super.key});
+class ThirdScreen extends StatelessWidget {
+  const ThirdScreen({Key? key}) : super(key: key);
 
   @override
-  Widget build (BuildContext context){
+  Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Tercero'),
       ),
-
       body: Center(
         child: ElevatedButton(
-          onPressed: (){
+          onPressed: () {
             Navigator.pop(context);
           },
-          child: const Text('vuelve!'),
+          child: const Text('¡Vuelve!'),
         ),
       ),
     );

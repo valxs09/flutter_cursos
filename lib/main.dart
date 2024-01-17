@@ -3,6 +3,7 @@ import 'design/menu_screen.dart';
 import 'menu/design_screen.dart';
 import 'menu/form_screen.dart';
 import 'menu/lists_screen.dart';
+import 'menu/navigation_screen.dart';
 void main() {
   runApp(const MyApp());
 }
@@ -76,6 +77,27 @@ class _MyHomePageState extends State<MyHomePage> {
                   Navigator.push(context, MaterialPageRoute(builder: (context) => const ListScreen()));
                 },
                 child: const Text('Listas')
+            ),
+             const SizedBox(height: 16),
+            ElevatedButton(
+                onPressed: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => const NavegationScreen()));
+                },
+                child: const Text('Navegation')
+            ),
+             const SizedBox(height: 16),
+            ElevatedButton(
+                onPressed: () {
+                  // Navigator.push(context, MaterialPageRoute(builder: (context) => const ListScreen()));
+                },
+                child: const Text('Networking')
+            ),
+             const SizedBox(height: 16),
+            ElevatedButton(
+                onPressed: () {
+                  // Navigator.push(context, MaterialPageRoute(builder: (context) => const ListScreen()));
+                },
+                child: const Text('Persistence')
             ),
           ],
         ),
