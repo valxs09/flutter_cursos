@@ -2,20 +2,15 @@ import 'package:flutter/material.dart';
 
 void main() {
   runApp(
-    MaterialApp(
+    const MaterialApp(
       title: 'Routes Demo',
-      initialRoute: '/',  // Establece la ruta inicial como '/'
-      routes: {
-        '/': (context) => const OtherScreen(),
-        '/second': (context) => const SecondScreen(),
-        '/tercero': (context) => const ThirdScreen(),
-      },
+      home: OtherScreen(),
     ),
   );
 }
 
 class OtherScreen extends StatelessWidget {
-  const OtherScreen({Key? key}) : super(key: key);
+  const OtherScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -26,17 +21,24 @@ class OtherScreen extends StatelessWidget {
       body: Center(
         child: ElevatedButton(
           onPressed: () {
-            Navigator.pushNamed(context, '/second');
+            navigateToSecondScreen(context);
           },
           child: const Text('Launch screen'),
         ),
       ),
     );
   }
+
+  void navigateToSecondScreen(BuildContext context) {
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => const SecondScreen()),
+    );
+  }
 }
 
 class SecondScreen extends StatelessWidget {
-  const SecondScreen({Key? key}) : super(key: key);
+  const SecondScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -47,17 +49,24 @@ class SecondScreen extends StatelessWidget {
       body: Center(
         child: ElevatedButton(
           onPressed: () {
-            Navigator.pushNamed(context, '/tercero');
+            navigateToThirdScreen(context);
           },
           child: const Text('Go to third screen!'),
         ),
       ),
     );
   }
+
+  void navigateToThirdScreen(BuildContext context) {
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => const ThirdScreen()),
+    );
+  }
 }
 
 class ThirdScreen extends StatelessWidget {
-  const ThirdScreen({Key? key}) : super(key: key);
+  const ThirdScreen({super.key});
 
   @override
   Widget build(BuildContext context) {

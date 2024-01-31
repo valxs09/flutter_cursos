@@ -4,6 +4,14 @@ import 'menu/design_screen.dart';
 import 'menu/form_screen.dart';
 import 'menu/lists_screen.dart';
 import 'menu/navigation_screen.dart';
+import 'menu/networking_screen.dart';
+import 'menu/persistence_screen.dart';
+import 'menu/gesture_screen.dart';
+import 'menu/effects_screen.dart';
+import 'menu/animation_screen.dart';
+
+
+
 void main() {
   runApp(const MyApp());
 }
@@ -88,16 +96,37 @@ class _MyHomePageState extends State<MyHomePage> {
              const SizedBox(height: 16),
             ElevatedButton(
                 onPressed: () {
-                  // Navigator.push(context, MaterialPageRoute(builder: (context) => const ListScreen()));
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => const NetworkingScreen()));
                 },
                 child: const Text('Networking')
             ),
              const SizedBox(height: 16),
             ElevatedButton(
                 onPressed: () {
-                  // Navigator.push(context, MaterialPageRoute(builder: (context) => const ListScreen()));
+                   Navigator.push(context, MaterialPageRoute(builder: (context) => const PersistenceScreen()));
                 },
                 child: const Text('Persistence')
+            ),
+            const SizedBox(height: 16),
+            ElevatedButton(
+                onPressed: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => const GestureScreen()));
+                },
+                child: const Text('Gesture')
+            ),
+            const SizedBox(height: 16),
+            ElevatedButton(
+                onPressed: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => const EffectsScreen()));
+                },
+                child: const Text('Effects')
+            ),
+            const SizedBox(height: 16),
+            ElevatedButton(
+                onPressed: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => const AnimationScreen()));
+                },
+                child: const Text('Animation')
             ),
           ],
         ),
